@@ -16,8 +16,8 @@ gem 'devise'
 gem 'chartkick', '~> 2.2.3'
 gem 'will_paginate'
 gem 'httparty'
-gem 'dotenv-rails'
 gem "paperclip", "~> 5.0.0"
+gem "rest-client"
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -30,6 +30,7 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'poltergeist'
   gem 'database_cleaner'
+  gem 'dotenv-rails'
 end
 
 group :development do

@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   end
   root 'home#index'
   get '/about', to: 'home#show', as: 'about'
+  get '/callback', to: 'home#callback', as: 'callback'
 end
