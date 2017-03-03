@@ -10,20 +10,23 @@
 
   <body>
     <div class="row">
-      <div class="col-md-3">
-        <a href="/">Home</a>
-        <br>
+      <div class="col-md-3" style="padding-left: 50px; padding-top: 100px;">
+        <h1><a href="/">Home</a>
+        <br><br>
         <a href="/about">About</a>
-        <br>
+        <br><br>
         <% if current_user %>
           <%= link_to "Projects", user_projects_path(current_user.id) %>
-          <br>
+          <br><br>
+          <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+          <br><br>
           <%= current_user.email %>
         <% else %>
-          <%= link_to "Log in", new_user_session_path %>
-          <br>
+          <%= link_to "Sign in", new_user_session_path %>
+          <br><br>
           <%= link_to "Sign up",  new_user_registration_path %>
         <% end %>
+      </h1>
       </div>
       <div class="col-md-9">
         <%= yield %>

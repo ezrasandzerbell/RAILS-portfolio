@@ -1,5 +1,10 @@
-<% @projects.each do |project| %>
+<center> <h1>Github Projects</h1></center>
+<br>
+<div class="container">
+  <% @projects.each do |project| %>
+    <div class="col-md-4 well">
+      <a href="http://www.github.com/<%= project['full_name'] %>" ><%= project['name'] %></a>
+    </div>
 
-  <a href="http://www.github.com/<%= project['full_name'] %>" ><%= project['name'] %></a>
-    <br><br><br><br>
-<% end %>
+  <% end %>
+</div>
