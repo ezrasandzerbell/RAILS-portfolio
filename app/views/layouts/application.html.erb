@@ -9,6 +9,25 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="row">
+      <div class="col-md-3">
+        <a href="/">Home</a>
+        <br>
+        <a href="/about">About</a>
+        <br>
+        <% if current_user %>
+          <%= link_to "Projects", user_projects_path(current_user.id) %>
+          <br>
+          <%= current_user.email %>
+        <% else %>
+          <%= link_to "Log in", new_user_session_path %>
+          <br>
+          <%= link_to "Sign up",  new_user_registration_path %>
+        <% end %>
+      </div>
+      <div class="col-md-9">
+        <%= yield %>
+      </div>
+   </div>
   </body>
 </html>

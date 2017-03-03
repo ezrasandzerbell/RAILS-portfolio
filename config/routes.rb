@@ -4,4 +4,5 @@ Rails.application.routes.draw do
     resources :projects
   end
   root 'home#index'
+  get '/about', to: 'home#show', as: 'about'
 end
