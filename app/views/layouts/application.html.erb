@@ -22,9 +22,7 @@
           <br><br>
           <%= current_user.email %>
         <% else %>
-          <%= link_to "Sign in", new_user_session_path %>
-          <br><br>
-          <%= link_to "Sign up",  new_user_registration_path %>
+          <%= link_to "Admin Sign in", new_user_session_path %>
         <% end %>
       </h1>
       </div>
